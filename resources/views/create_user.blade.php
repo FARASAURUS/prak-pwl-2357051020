@@ -3,7 +3,6 @@
 @section('content')
 <div class="container py-4">
 
-    {{-- Header Halaman --}}
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="fw-bold text-primary">Tambah Pengguna</h2>
         <a href="{{ url('/user') }}" class="btn btn-outline-secondary">
@@ -11,7 +10,6 @@
         </a>
     </div>
 
-    {{-- Form Tambah User --}}
     <div class="card shadow-sm">
         <div class="card-header bg-white">
             <h5 class="mb-0">Form Input Data Pengguna</h5>
@@ -20,19 +18,16 @@
             <form action="{{ route('user.store') }}" method="POST">
                 @csrf
 
-                {{-- Nama --}}
                 <div class="mb-3">
                     <label for="nama" class="form-label fw-semibold">Nama Lengkap</label>
                     <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
                 </div>
 
-                {{-- NIM --}}
                 <div class="mb-3">
                     <label for="nim" class="form-label fw-semibold">NIM</label>
                     <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM" required>
                 </div>
 
-                {{-- Kelas --}}
                 <div class="mb-3">
                     <label for="kelas_id" class="form-label fw-semibold">Kelas</label>
                     <select name="kelas_id" id="kelas_id" class="form-select" required>
@@ -43,7 +38,6 @@
                     </select>
                 </div>
 
-                {{-- Tombol --}}
                 <div class="d-flex justify-content-end">
                     <button type="submit" class="btn btn-primary">
                         <i class="bi bi-save"></i> Simpan
